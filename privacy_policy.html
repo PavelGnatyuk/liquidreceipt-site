@@ -29,6 +29,14 @@
       margin-bottom: 2rem;
     }
     
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+    
     .hero h1 {
       font-size: 2.5rem;
       margin: 0;
@@ -212,7 +220,8 @@
 </head>
 <body>
   <div class="hero">
-    <h1>🔒 Privacy Policy</h1>
+    <img src="appicon.png" alt="Receipt App Icon" class="app-icon">
+    <h1>Privacy Policy</h1>
     <p>Your privacy matters to us</p>
   </div>
 
@@ -223,7 +232,7 @@
 
     <div class="summary-box">
       <h2>Privacy at a Glance</h2>
-      <p>Receipt prioritizes your privacy. We don't use ads, trackers, or analytics. All your receipts are stored locally on your device – we never see your financial data.</p>
+      <p>Receipt prioritizes your privacy. We don't use ads, trackers, or analytics. All your receipts and financial data are stored locally on your device – we never see or access your data.</p>
     </div>
 
     <div class="card">
@@ -245,24 +254,34 @@
         <tbody>
           <tr>
             <td><strong>Receipt Images</strong></td>
-            <td>Store and display your scanned receipts</td>
+            <td>Store your scanned receipts as PDFs</td>
             <td>When you scan or import receipts</td>
           </tr>
           <tr>
-            <td><strong>Receipt Data</strong></td>
-            <td>Store extracted text and purchase details</td>
-            <td>When you scan receipts</td>
+            <td><strong>Extracted Data</strong></td>
+            <td>Store merchant, date, total, line items</td>
+            <td>Automatically during scanning (on-device OCR)</td>
           </tr>
           <tr>
-            <td><strong>App Preferences</strong></td>
-            <td>Remember your settings and preferences</td>
-            <td>When you customize the app</td>
+            <td><strong>Comments</strong></td>
+            <td>Store your notes on receipts</td>
+            <td>When you add typed or dictated comments</td>
+          </tr>
+          <tr>
+            <td><strong>Folder Structure</strong></td>
+            <td>Organize your receipts</td>
+            <td>When you create and organize folders</td>
+          </tr>
+          <tr>
+            <td><strong>Currency Settings</strong></td>
+            <td>Track exchange rates and default currency</td>
+            <td>When you configure currency preferences</td>
           </tr>
         </tbody>
       </table>
 
       <div class="highlight-box">
-        <strong>Important:</strong> All data processing happens locally on your device. Receipt does not collect any background data, analytics, or personal information.
+        <strong>Important:</strong> All data processing happens locally on your device using Apple's Vision framework. Receipt does not send your data to any external servers.
       </div>
     </div>
 
@@ -271,12 +290,14 @@
         <span class="icon">💾</span>
         Local Data Storage
       </h2>
-      <p>Receipt stores all your data locally on your device. This includes:</p>
+      <p>Receipt stores all your data locally on your device using Apple's SwiftData framework. This includes:</p>
       <ul>
-        <li>Scanned receipt images</li>
-        <li>Extracted text and purchase information</li>
-        <li>Categories and tags you create</li>
-        <li>Your app preferences and settings</li>
+        <li>Scanned receipt PDFs (multi-page supported)</li>
+        <li>Extracted data: merchant names, dates, totals, line items</li>
+        <li>Folder organization and structure</li>
+        <li>Your comments and notes</li>
+        <li>Currency preferences and exchange rates</li>
+        <li>App settings</li>
       </ul>
     </div>
 
@@ -287,10 +308,59 @@
       </h2>
       <p>Receipt uses your device's camera to scan receipts:</p>
       <ul>
-        <li>Camera access is only activated when you choose to scan</li>
-        <li>Photos are processed and stored locally on your device</li>
+        <li>Camera access is only activated when you tap the scan button</li>
+        <li>Photos are converted to PDFs and stored locally</li>
+        <li>Multi-page scanning is supported for long receipts</li>
         <li>No images are ever uploaded to external servers</li>
         <li>You can revoke camera access at any time in iOS Settings</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🎤</span>
+        Microphone Usage
+      </h2>
+      <p>Receipt uses the microphone for voice dictation of comments:</p>
+      <ul>
+        <li>Microphone is only activated when you tap the dictation button</li>
+        <li>Speech recognition is processed using Apple's Speech framework</li>
+        <li>Dictated text is converted to comments and stored locally</li>
+        <li>No audio recordings are stored or transmitted</li>
+        <li>You can revoke microphone access at any time in iOS Settings</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🧠</span>
+        OCR & Data Extraction
+      </h2>
+      <p>Receipt automatically extracts data from your receipts:</p>
+      <ul>
+        <li>OCR processing uses Apple's Vision framework entirely on-device</li>
+        <li>Extracted data includes merchant name, date, total, and line items</li>
+        <li>Currency is automatically detected from receipt text</li>
+        <li>All processing happens locally – no data is sent to servers</li>
+        <li>You can manually edit any extracted data</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <strong>On-Device Processing:</strong> Apple's Vision framework runs entirely on your iPhone. Your receipt images and extracted data never leave your device.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">📤</span>
+        Share Extension
+      </h2>
+      <p>Receipt includes a Share Extension to import receipts from other apps:</p>
+      <ul>
+        <li>Accept PDFs and images from Files, Mail, Safari, Photos</li>
+        <li>Imported files are processed and stored locally</li>
+        <li>Data sharing between the extension and main app uses iOS App Groups</li>
+        <li>No data is transmitted to external services</li>
       </ul>
     </div>
 
@@ -300,16 +370,17 @@
         Third-Party Services
       </h2>
       
-      <p>Receipt is designed to work completely offline. We do not use any third-party services for:</p>
+      <p>Receipt is designed to work completely offline using only Apple frameworks:</p>
       <ul>
-        <li>Data storage or cloud sync</li>
-        <li>Analytics or tracking</li>
-        <li>Advertising</li>
-        <li>User profiling</li>
+        <li><strong>VisionKit & Vision:</strong> Document scanning and OCR (Apple, on-device)</li>
+        <li><strong>PDFKit:</strong> PDF creation and viewing (Apple, on-device)</li>
+        <li><strong>SwiftData:</strong> Local data storage (Apple, on-device)</li>
+        <li><strong>Speech:</strong> Dictation for comments (Apple, on-device)</li>
       </ul>
+      <p>We do not use any third-party services for data storage, analytics, advertising, or tracking.</p>
       
       <div class="highlight-box">
-        <strong>100% Offline:</strong> Receipt works entirely on your device without requiring an internet connection.
+        <strong>Apple Only:</strong> Receipt uses exclusively Apple frameworks. No third-party SDKs, no analytics, no tracking.
       </div>
     </div>
 
@@ -320,6 +391,12 @@
       </h2>
       
       <p>We do not share, sell, or transmit your personal information or receipt data to any third parties. Your financial information stays on your device.</p>
+      
+      <p>The only time your data leaves your device is when <strong>you choose</strong> to:</p>
+      <ul>
+        <li>Export receipts as PDF or CSV files</li>
+        <li>Share files via iOS Share Sheet to other apps</li>
+      </ul>
     </div>
 
     <div class="card">
@@ -330,10 +407,11 @@
       
       <p>All data collected by Receipt is used solely to provide app functionality:</p>
       <ul>
-        <li>Display and organize your scanned receipts</li>
-        <li>Extract and store receipt information</li>
-        <li>Enable searching through your receipts</li>
-        <li>Export receipts when you choose to share them</li>
+        <li>Store and display your scanned receipts</li>
+        <li>Extract and organize receipt information</li>
+        <li>Enable searching by merchant, amount, or text</li>
+        <li>Track currencies and exchange rates</li>
+        <li>Generate export reports (PDF, CSV) when requested</li>
       </ul>
     </div>
 
@@ -348,6 +426,9 @@
       
       <h3>No Cloud Sync</h3>
       <p>Receipt does not offer cloud synchronization. Your data remains exclusively on your device, giving you complete control.</p>
+      
+      <h3>No Account Required</h3>
+      <p>Receipt does not require registration or login. There are no user accounts to manage or secure.</p>
       
       <div class="highlight-box">
         <strong>Important:</strong> We do not store your receipts or personal data on our servers. Everything stays on your device.
@@ -371,7 +452,8 @@
         <li>❌ Share your data with advertisers or data brokers</li>
         <li>❌ Store your data on our servers</li>
         <li>❌ Require user registration or accounts</li>
-        <li>❌ Access your financial accounts</li>
+        <li>❌ Access your financial accounts or bank information</li>
+        <li>❌ Send any data over the internet</li>
       </ul>
     </div>
 
@@ -385,9 +467,11 @@
       
       <ul>
         <li><strong>Access:</strong> You have full access to all your receipt data within the app</li>
-        <li><strong>Export:</strong> You can export your receipts at any time</li>
-        <li><strong>Deletion:</strong> You can delete individual receipts or clear all data from within the app</li>
+        <li><strong>Export:</strong> You can export your receipts as PDF or CSV at any time</li>
+        <li><strong>Edit:</strong> You can edit extracted data (merchant, total, date, currency)</li>
+        <li><strong>Deletion:</strong> You can delete individual receipts, folders, or use the archive</li>
         <li><strong>Camera Control:</strong> You can enable or disable camera access in iOS Settings</li>
+        <li><strong>Microphone Control:</strong> You can enable or disable microphone access in iOS Settings</li>
       </ul>
     </div>
 

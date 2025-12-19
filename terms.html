@@ -23,6 +23,15 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         
+        .app-icon {
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        
         h1 {
             color: #667085;
             font-size: 28px;
@@ -119,10 +128,11 @@
 </head>
 <body>
     <div class="container">
+        <img src="appicon.png" alt="Receipt App Icon" class="app-icon">
         <h1>Terms & Conditions</h1>
         
         <div class="terms-summary">
-            <p><strong>Terms at a Glance:</strong> By using <span class="app-name">Receipt</span>, you agree to use the app responsibly. We provide the app "as-is" with all data stored locally on your device for your privacy.</p>
+            <p><strong>Terms at a Glance:</strong> By using <span class="app-name">Receipt</span>, you agree to use the app responsibly for personal expense management. We provide the app "as-is" with all data stored locally on your device. Free forever – no ads, no subscriptions.</p>
         </div>
         
         <h2>1. Acceptance of Terms</h2>
@@ -130,24 +140,29 @@
         
         <p>These terms apply to all users, features, and functionality of <span class="app-name">Receipt</span>, including but not limited to:</p>
         <ul>
-            <li>Receipt scanning and image capture</li>
-            <li>Local receipt storage and organization</li>
-            <li>Receipt viewing and management</li>
-            <li>Receipt export and sharing features</li>
+            <li>Receipt scanning and PDF creation</li>
+            <li>Automatic data extraction (OCR)</li>
+            <li>Folder organization and management</li>
+            <li>Comments and dictation features</li>
+            <li>Search functionality</li>
+            <li>Export features (PDF and CSV)</li>
+            <li>Share Extension</li>
+            <li>Currency management</li>
         </ul>
         
         <h2>2. Permitted Use</h2>
-        <p><span class="app-name">Receipt</span> is designed for personal receipt management. You may use the App for:</p>
+        <p><span class="app-name">Receipt</span> is designed for personal expense and receipt management. You may use the App for:</p>
         <ul>
-            <li>Personal expense tracking</li>
-            <li>Receipt organization and archiving</li>
-            <li>Record keeping for personal finances</li>
-            <li>Sharing receipts when needed</li>
-            <li>Non-commercial personal activities</li>
+            <li>Personal expense tracking and organization</li>
+            <li>Business trip expense documentation</li>
+            <li>Travel expense management</li>
+            <li>Receipt archiving and record keeping</li>
+            <li>Generating expense reports for reimbursement</li>
+            <li>Personal financial organization</li>
         </ul>
 
         <div class="highlight-box">
-            <p><strong>Personal Use:</strong> <span class="app-name">Receipt</span> is designed for personal, non-commercial use to help you organize and manage your receipts.</p>
+            <p><strong>Free Forever:</strong> <span class="app-name">Receipt</span> is completely free. No ads, no subscriptions, no in-app purchases. We believe expense management tools should be accessible to everyone.</p>
         </div>
         
         <h2>3. Prohibited Activities</h2>
@@ -155,90 +170,121 @@
         <ul>
             <li>Use the App for any illegal or unauthorized purposes</li>
             <li>Attempt to reverse engineer, decompile, or modify the App</li>
-            <li>Use the App to distribute malicious content</li>
+            <li>Use the App to create fraudulent expense reports</li>
             <li>Violate any applicable laws or regulations</li>
             <li>Interfere with or disrupt the App's functionality</li>
-            <li>Use the App for fraudulent purposes</li>
+            <li>Use the App for commercial resale or distribution</li>
         </ul>
         
         <h2>4. Privacy and Data</h2>
-        <p><span class="app-name">Receipt</span> is designed with privacy in mind:</p>
+        <p><span class="app-name">Receipt</span> is designed with privacy as a core principle:</p>
         <ul>
             <li>All receipt data is stored locally on your device</li>
+            <li>OCR processing uses Apple's Vision framework on-device</li>
             <li>We do not upload, access, or store your receipts</li>
             <li>No internet connection is required to use the App</li>
             <li>Your financial information never leaves your device</li>
+            <li>No user accounts or registration required</li>
         </ul>
 
         <div class="highlight-box">
-            <p><strong>Your Data, Your Device:</strong> All receipts and data remain exclusively on your device. We have no access to your information.</p>
+            <p><strong>Your Data, Your Device:</strong> All receipts, extracted data, and settings remain exclusively on your device. We have no access to your information.</p>
         </div>
         
-        <h2>5. Camera Access</h2>
-        <p>The App requires camera access to scan receipts:</p>
+        <h2>5. Camera and Microphone Access</h2>
+        <p>The App requires certain device permissions:</p>
+        
+        <h3>5.1 Camera Access</h3>
         <ul>
-            <li>Camera is only used when you actively choose to scan</li>
-            <li>Photos are stored locally on your device only</li>
-            <li>No images are transmitted to external servers</li>
-            <li>You can revoke camera access at any time in iOS Settings</li>
+            <li>Used only for scanning receipts when you initiate a scan</li>
+            <li>Photos are converted to PDFs and stored locally</li>
+            <li>Multi-page scanning supported for long receipts</li>
+            <li>No images are transmitted externally</li>
         </ul>
         
-        <h2>6. Intellectual Property</h2>
-        <h3>6.1 Receipt App</h3>
+        <h3>5.2 Microphone Access</h3>
+        <ul>
+            <li>Used only for voice dictation of comments</li>
+            <li>Speech is processed using Apple's on-device Speech framework</li>
+            <li>No audio recordings are stored or transmitted</li>
+        </ul>
+        
+        <p>You can revoke these permissions at any time in iOS Settings.</p>
+        
+        <h2>6. OCR and Data Extraction</h2>
+        <p>The App uses Apple's Vision framework to automatically extract data from receipts:</p>
+        <ul>
+            <li>Extraction includes merchant name, date, total, currency, and line items</li>
+            <li>All processing occurs entirely on your device</li>
+            <li>Accuracy depends on receipt quality and legibility</li>
+            <li>You can manually edit any extracted data</li>
+            <li>We make no guarantees about extraction accuracy</li>
+        </ul>
+
+        <div class="warning-box">
+            <p><strong>Verify Important Data:</strong> Always verify extracted data for important financial records. OCR accuracy varies based on receipt quality, printing, and legibility.</p>
+        </div>
+        
+        <h2>7. Intellectual Property</h2>
+        <h3>7.1 Receipt App</h3>
         <p><span class="app-name">Receipt</span> is proprietary software owned by Pavel Gnatyuk. All rights, title, and interest in the App remain with the developer.</p>
         
-        <h3>6.2 Your Content</h3>
+        <h3>7.2 Your Content</h3>
         <p>You retain full ownership of all receipts and data you store in the App:</p>
         <ul>
             <li>Your scanned receipts belong to you</li>
+            <li>Your comments and notes belong to you</li>
             <li>We make no claim to your content</li>
             <li>You can export or delete your data at any time</li>
         </ul>
         
-        <h2>7. User Content and Data</h2>
-        <p>Regarding content you create in <span class="app-name">Receipt</span>:</p>
+        <h2>8. Export and Sharing</h2>
+        <p>The App allows you to export your data:</p>
         <ul>
-            <li>You retain ownership of your receipts and data</li>
-            <li>You are responsible for backing up your data</li>
-            <li>We do not have access to your content</li>
-            <li>Exported receipts may be shared according to your preferences</li>
+            <li>Export combined PDF with all receipts in a folder</li>
+            <li>Export CSV with extracted data (merchant, date, total, currency, comments)</li>
+            <li>Share via iOS Share Sheet to other apps</li>
+            <li>You are responsible for how you use exported data</li>
         </ul>
         
-        <h2>8. Disclaimers and Limitations</h2>
-        <h3>8.1 Service Availability</h3>
+        <h2>9. Disclaimers and Limitations</h2>
+        <h3>9.1 Service Availability</h3>
         <p><span class="app-name">Receipt</span> is provided "as-is" without warranties of any kind. We do not guarantee:</p>
         <ul>
             <li>Uninterrupted or error-free operation</li>
             <li>Compatibility with all devices or iOS versions</li>
-            <li>Accuracy of any text recognition features</li>
+            <li>Accuracy of OCR data extraction</li>
+            <li>Suitability for any particular purpose</li>
         </ul>
         
-        <h3>8.2 Financial Disclaimer</h3>
-        <p><span class="app-name">Receipt</span> is a receipt organization tool, not financial software:</p>
+        <h3>9.2 Financial Disclaimer</h3>
+        <p><span class="app-name">Receipt</span> is a receipt organization tool, not financial or accounting software:</p>
         <ul>
             <li>We are not responsible for financial decisions based on App data</li>
             <li>Always verify important financial information independently</li>
-            <li>The App is not a substitute for professional financial advice</li>
+            <li>The App is not a substitute for professional financial or tax advice</li>
+            <li>Consult appropriate professionals for financial matters</li>
         </ul>
 
         <div class="warning-box">
-            <p><strong>Not Financial Advice:</strong> <span class="app-name">Receipt</span> is for organization purposes only. Consult a financial professional for financial matters.</p>
+            <p><strong>Not Financial Advice:</strong> <span class="app-name">Receipt</span> is for organization purposes only. Consult a financial professional for tax, accounting, or financial matters.</p>
         </div>
         
-        <h2>9. Limitation of Liability</h2>
+        <h2>10. Limitation of Liability</h2>
         <p>To the fullest extent permitted by law:</p>
         <ul>
             <li>We are not liable for any indirect, incidental, or consequential damages</li>
-            <li>Our total liability shall not exceed the amount you paid for the App (if any)</li>
+            <li>Our total liability shall not exceed the amount you paid for the App (which is $0)</li>
             <li>We are not responsible for data loss due to device failure or user error</li>
+            <li>We are not responsible for errors in OCR extraction</li>
             <li>You use the App at your own risk</li>
         </ul>
         <p>This limitation applies even if we have been advised of the possibility of such damages.</p>
         
-        <h2>10. App Store Terms</h2>
+        <h2>11. App Store Terms</h2>
         <p>If you downloaded <span class="app-name">Receipt</span> from the Apple App Store, you also agree to Apple's Terms of Service. In case of conflicts between these terms and Apple's terms, Apple's terms take precedence for App Store-related matters.</p>
         
-        <h2>11. Updates and Modifications</h2>
+        <h2>12. Updates and Modifications</h2>
         <p>We may update these Terms & Conditions from time to time. When we do:</p>
         <ul>
             <li>We will update the "Last Updated" date</li>
@@ -247,7 +293,7 @@
             <li>If you disagree with changes, discontinue use of the App</li>
         </ul>
         
-        <h2>12. Governing Law and Disputes</h2>
+        <h2>13. Governing Law and Disputes</h2>
         <p>These terms are governed by the laws of your jurisdiction. For disputes:</p>
         <ul>
             <li>First, contact us directly to resolve issues amicably</li>
@@ -255,16 +301,16 @@
             <li>Most issues can be resolved through open communication</li>
         </ul>
         
-        <h2>13. Termination</h2>
+        <h2>14. Termination</h2>
         <p>These terms remain in effect until:</p>
         <ul>
             <li>You delete the App from your device</li>
             <li>We discontinue the App (with reasonable notice)</li>
             <li>You violate these terms (automatic termination)</li>
         </ul>
-        <p>Upon termination, you must stop using the App and may delete any related data.</p>
+        <p>Upon termination, you must stop using the App. Your local data remains on your device until you delete it.</p>
         
-        <h2>14. Contact Information</h2>
+        <h2>15. Contact Information</h2>
         <div class="contact-info">
             <p>Questions about these Terms & Conditions? We're here to help:</p>
             <p><strong>Email:</strong> <a href="mailto:privacy@pavelgnatyuk.com">privacy@pavelgnatyuk.com</a></p>

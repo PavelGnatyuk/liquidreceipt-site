@@ -209,7 +209,7 @@
   <div class="hero">
     <img src="appicon.png" alt="Receipt App Icon" class="app-icon">
     <h1>Receipt Support</h1>
-    <p>Simple and private receipt scanner for iOS</p>
+    <p>Smart receipt scanner for business & travel</p>
   </div>
 
   <div class="container">
@@ -233,27 +233,52 @@
       
       <div class="faq-item">
         <strong>How do I scan a receipt?</strong>
-        Open the app and tap the scan button. Point your camera at the receipt and the app will automatically capture it.
+        Open the app, select or create a folder, then tap the scan button. Point your camera at the receipt – multi-page scanning is supported for long receipts.
+      </div>
+      
+      <div class="faq-item">
+        <strong>What data is extracted automatically?</strong>
+        Receipt uses Apple's Vision framework to automatically extract merchant name, transaction date, total amount, and individual line items from your receipts.
+      </div>
+      
+      <div class="faq-item">
+        <strong>Can I edit the extracted data?</strong>
+        Yes! You can manually edit the merchant name, total amount, currency, date, and exchange rate for any receipt. Edited fields are marked with a visual indicator.
+      </div>
+      
+      <div class="faq-item">
+        <strong>What currencies are supported?</strong>
+        Receipt supports 7 currencies: USD, EUR, GBP, RUB, ILS, GEL, and BYN. The app automatically detects currencies from receipt text, and you can add custom currencies with your own exchange rates.
+      </div>
+      
+      <div class="faq-item">
+        <strong>How do I export my receipts?</strong>
+        You can export as combined PDF (all receipts in one document) or CSV (spreadsheet with extracted data including merchant, date, total, currency, and comments). Perfect for expense reports!
+      </div>
+      
+      <div class="faq-item">
+        <strong>Can I share receipts from other apps?</strong>
+        Yes! Use the iOS Share Extension to send PDFs and images from Files, Mail, Safari, or Photos directly to Receipt.
+      </div>
+      
+      <div class="faq-item">
+        <strong>How does search work?</strong>
+        Search finds receipts by folder name, receipt name, comments, merchant name, or any text from the receipt (OCR). Case-insensitive and very fast.
       </div>
       
       <div class="faq-item">
         <strong>Does Receipt work offline?</strong>
-        Yes! Receipt works completely offline. No internet connection is required to scan, view, or manage your receipts.
+        Yes! Everything works completely offline. No internet connection is required to scan, organize, search, or export receipts.
       </div>
       
       <div class="faq-item">
         <strong>Where are my receipts stored?</strong>
-        All your receipts are stored locally on your device. We never upload your data to any server or cloud service.
+        All your receipts are stored locally on your device as PDFs. We never upload your data to any server or cloud service.
       </div>
       
       <div class="faq-item">
-        <strong>Can I export my receipts?</strong>
-        Yes! You can export individual receipts or share them via iOS's standard sharing options.
-      </div>
-      
-      <div class="faq-item">
-        <strong>Is my financial data safe?</strong>
-        Absolutely. Your receipt data never leaves your device. We don't have access to your receipts or any personal information.
+        <strong>Can I add notes to receipts?</strong>
+        Yes! Add comments by typing or using dictation. Great for adding context like "Client dinner" or "Hotel 3 nights".
       </div>
     </div>
 
@@ -264,20 +289,36 @@
       </h2>
       <div class="features-grid">
         <div class="feature-item">
-          <strong>📷 Quick Scanning</strong><br>
-          Fast and easy receipt capture with your camera
+          <strong>🧠 Smart OCR</strong><br>
+          Auto-extract merchant, date, total & line items
+        </div>
+        <div class="feature-item">
+          <strong>📁 Folder Organization</strong><br>
+          Organize by trip, project, or category
+        </div>
+        <div class="feature-item">
+          <strong>💱 Multi-Currency</strong><br>
+          7 currencies with exchange rate tracking
+        </div>
+        <div class="feature-item">
+          <strong>📤 Export Reports</strong><br>
+          Combined PDF & CSV for expense reports
+        </div>
+        <div class="feature-item">
+          <strong>🔍 Powerful Search</strong><br>
+          Find by merchant, amount, or any text
+        </div>
+        <div class="feature-item">
+          <strong>🎤 Voice Comments</strong><br>
+          Add notes by typing or dictation
+        </div>
+        <div class="feature-item">
+          <strong>📲 Share Extension</strong><br>
+          Import from Files, Mail, Safari
         </div>
         <div class="feature-item">
           <strong>🔒 100% Private</strong><br>
-          All data stays on your device, no cloud uploads
-        </div>
-        <div class="feature-item">
-          <strong>📴 Works Offline</strong><br>
-          No internet connection required
-        </div>
-        <div class="feature-item">
-          <strong>🚫 No Ads</strong><br>
-          Clean, ad-free experience
+          All data stays on your device
         </div>
       </div>
     </div>
@@ -288,7 +329,7 @@
         Useful Links
       </h2>
       <div class="links-grid">
-        <a href="https://liquidreceipt.pavelgnatyuk.com/privacy_policy.html" class="link-item">
+        <a href="privacy_policy.html" class="link-item">
           <strong>🔒 Privacy Policy</strong>
           <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Learn how we protect your data</div>
         </a>
@@ -301,7 +342,7 @@
   </div>
 
   <div class="footer">
-    &copy; 2025 Receipt by Pavel Gnatyuk • Made with 🧾 for organized people
+    &copy; 2025 Receipt by Pavel Gnatyuk • Made for organized travelers
   </div>
 </body>
 </html>
