@@ -32,6 +32,10 @@ Receipt turns paper receipts into organized PDFs with automatic intelligent data
 - **Design:** Liquid Glass with Sepia theme
 - **Storage:** Local only (SwiftData)
 
+## Download
+
+[![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/app/id6753892642)
+
 ## Contact
 
 For questions or support: privacy@pavelgnatyuk.com
