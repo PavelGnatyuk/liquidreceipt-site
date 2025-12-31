@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Политика конфиденциальности – LiquidReceipt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #8E9EAB 0%, #EEF2F3 100%);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .hero {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem 0;
+      text-align: center;
+      color: white;
+      margin-bottom: 2rem;
+    }
+    
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+      margin: 1rem 0 0;
+      opacity: 0.9;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #667085, #8E9EAB);
+      color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .summary-box h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    
+    .summary-box p {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+    
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #34495e;
+      font-weight: 600;
+    }
+    
+    .icon {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+    
+    a {
+      color: #667085;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: #D4A84B;
+      text-decoration: underline;
+    }
+    
+    .highlight-box {
+      background: #f8f9fa;
+      border-left: 4px solid #D4A84B;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .data-table th,
+    .data-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .data-table th {
+      background: #f8f9fa;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .contact-info {
+      background: linear-gradient(135deg, #667085, #8E9EAB);
+      color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .contact-info a {
+      color: white;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 2rem;
+    }
+    
+    .last-updated {
+      background: #FFF8E7;
+      border: 1px solid #D4A84B;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #8B7355;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .container {
+        padding: 0 1rem 2rem;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
+      
+      .data-table {
+        font-size: 0.9rem;
+      }
+      
+      .data-table th,
+      .data-table td {
+        padding: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="appicon.png" alt="Иконка приложения LiquidReceipt" class="app-icon">
+    <h1>Политика конфиденциальности</h1>
+    <p>Ваша приватность важна для нас</p>
+  </div>
+
+  <div class="container">
+    <div class="last-updated">
+      <strong>Последнее обновление:</strong> 19 декабря 2025 г.
+    </div>
+
+    <div class="summary-box">
+      <h2>Кратко о приватности</h2>
+      <p>LiquidReceipt ставит вашу конфиденциальность на первое место. Мы не используем рекламу, трекеры или аналитику. Все ваши чеки и финансовые данные хранятся локально на вашем устройстве — мы никогда не видим и не получаем доступ к вашим данным.</p>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">ℹ️</span>
+        Какую информацию мы собираем
+      </h2>
+      
+      <p>LiquidReceipt собирает минимум информации только при активном использовании определённых функций:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Тип данных</th>
+            <th>Назначение</th>
+            <th>Когда собирается</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Изображения чеков</strong></td>
+            <td>Хранение отсканированных чеков в виде PDF</td>
+            <td>При сканировании или импорте чеков</td>
+          </tr>
+          <tr>
+            <td><strong>Извлечённые данные</strong></td>
+            <td>Хранение магазина, даты, суммы, позиций</td>
+            <td>Автоматически при сканировании (OCR на устройстве)</td>
+          </tr>
+          <tr>
+            <td><strong>Комментарии</strong></td>
+            <td>Хранение ваших заметок к чекам</td>
+            <td>При добавлении текстовых или голосовых комментариев</td>
+          </tr>
+          <tr>
+            <td><strong>Структура папок</strong></td>
+            <td>Организация ваших чеков</td>
+            <td>При создании и организации папок</td>
+          </tr>
+          <tr>
+            <td><strong>Настройки валют</strong></td>
+            <td>Отслеживание курсов и валюты по умолчанию</td>
+            <td>При настройке валютных предпочтений</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <strong>Важно:</strong> Вся обработка данных происходит локально на вашем устройстве с использованием Apple Vision. LiquidReceipt не отправляет ваши данные на внешние серверы.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">💾</span>
+        Локальное хранение данных
+      </h2>
+      <p>LiquidReceipt хранит все ваши данные локально на устройстве с использованием Apple SwiftData. Это включает:</p>
+      <ul>
+        <li>Отсканированные чеки в PDF (поддержка многостраничных документов)</li>
+        <li>Извлечённые данные: названия магазинов, даты, суммы, позиции</li>
+        <li>Организация и структура папок</li>
+        <li>Ваши комментарии и заметки</li>
+        <li>Валютные настройки и курсы обмена</li>
+        <li>Настройки приложения</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">📷</span>
+        Использование камеры
+      </h2>
+      <p>LiquidReceipt использует камеру вашего устройства для сканирования чеков:</p>
+      <ul>
+        <li>Камера активируется только при нажатии кнопки сканирования</li>
+        <li>Фотографии конвертируются в PDF и хранятся локально</li>
+        <li>Поддерживается многостраничное сканирование для длинных чеков</li>
+        <li>Изображения никогда не загружаются на внешние серверы</li>
+        <li>Вы можете отозвать доступ к камере в любое время в Настройках iOS</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🎤</span>
+        Использование микрофона
+      </h2>
+      <p>LiquidReceipt использует микрофон для голосовой диктовки комментариев:</p>
+      <ul>
+        <li>Микрофон активируется только при нажатии кнопки диктовки</li>
+        <li>Распознавание речи обрабатывается с помощью Apple Speech</li>
+        <li>Надиктованный текст преобразуется в комментарии и хранится локально</li>
+        <li>Аудиозаписи не сохраняются и не передаются</li>
+        <li>Вы можете отозвать доступ к микрофону в любое время в Настройках iOS</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🧠</span>
+        OCR и извлечение данных
+      </h2>
+      <p>LiquidReceipt автоматически извлекает данные из ваших чеков:</p>
+      <ul>
+        <li>OCR-обработка использует Apple Vision полностью на устройстве</li>
+        <li>Извлекаемые данные включают название магазина, дату, сумму и позиции</li>
+        <li>Валюта автоматически определяется из текста чека</li>
+        <li>Вся обработка происходит локально — данные не отправляются на серверы</li>
+        <li>Вы можете вручную редактировать любые извлечённые данные</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <strong>Обработка на устройстве:</strong> Apple Vision работает полностью на вашем iPhone. Изображения чеков и извлечённые данные никогда не покидают ваше устройство.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">📤</span>
+        Расширение «Поделиться»
+      </h2>
+      <p>LiquidReceipt включает расширение «Поделиться» для импорта чеков из других приложений:</p>
+      <ul>
+        <li>Принимает PDF и изображения из Файлов, Почты, Safari, Фото</li>
+        <li>Импортированные файлы обрабатываются и хранятся локально</li>
+        <li>Обмен данными между расширением и основным приложением использует iOS App Groups</li>
+        <li>Данные не передаются внешним сервисам</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🔗</span>
+        Сторонние сервисы
+      </h2>
+      
+      <p>LiquidReceipt разработан для полностью автономной работы с использованием только фреймворков Apple:</p>
+      <ul>
+        <li><strong>VisionKit и Vision:</strong> Сканирование документов и OCR (Apple, на устройстве)</li>
+        <li><strong>PDFKit:</strong> Создание и просмотр PDF (Apple, на устройстве)</li>
+        <li><strong>SwiftData:</strong> Локальное хранение данных (Apple, на устройстве)</li>
+        <li><strong>Speech:</strong> Диктовка для комментариев (Apple, на устройстве)</li>
+      </ul>
+      <p>Мы не используем сторонние сервисы для хранения данных, аналитики, рекламы или отслеживания.</p>
+      
+      <div class="highlight-box">
+        <strong>Только Apple:</strong> LiquidReceipt использует исключительно фреймворки Apple. Никаких сторонних SDK, аналитики или отслеживания.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🔒</span>
+        Передача данных
+      </h2>
+      
+      <p>Мы не передаём, не продаём и не отправляем вашу личную информацию или данные чеков третьим лицам. Ваша финансовая информация остаётся на вашем устройстве.</p>
+      
+      <p>Единственный случай, когда ваши данные покидают устройство — это когда <strong>вы сами решаете</strong>:</p>
+      <ul>
+        <li>Экспортировать чеки в PDF или CSV файлы</li>
+        <li>Поделиться файлами через iOS Share Sheet в другие приложения</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🎯</span>
+        Как мы используем вашу информацию
+      </h2>
+      
+      <p>Все данные, собранные LiquidReceipt, используются исключительно для обеспечения функциональности приложения:</p>
+      <ul>
+        <li>Хранение и отображение отсканированных чеков</li>
+        <li>Извлечение и организация информации о чеках</li>
+        <li>Поиск по магазину, сумме или тексту</li>
+        <li>Отслеживание валют и курсов обмена</li>
+        <li>Создание экспортных отчётов (PDF, CSV) по запросу</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🛡️</span>
+        Хранение и безопасность данных
+      </h2>
+      
+      <h3>Локальное хранение</h3>
+      <p>Все ваши чеки и данные приложения хранятся локально на вашем устройстве с использованием защищённых механизмов хранения iOS. Мы не поддерживаем серверы или базы данных с вашей информацией.</p>
+      
+      <h3>Без облачной синхронизации</h3>
+      <p>LiquidReceipt не предлагает облачную синхронизацию. Ваши данные остаются исключительно на вашем устройстве, что даёт вам полный контроль.</p>
+      
+      <h3>Без регистрации</h3>
+      <p>LiquidReceipt не требует регистрации или входа в систему. Нет учётных записей для управления или защиты.</p>
+      
+      <div class="highlight-box">
+        <strong>Важно:</strong> Мы не храним ваши чеки или личные данные на наших серверах. Всё остаётся на вашем устройстве.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🚫</span>
+        Чего мы НЕ делаем
+      </h2>
+      
+      <p>LiquidReceipt уважает вашу конфиденциальность. Мы явно НЕ:</p>
+      
+      <ul>
+        <li>❌ Используем рекламные сети или показываем рекламу</li>
+        <li>❌ Включаем аналитику или отслеживание пользователей</li>
+        <li>❌ Используем сторонние SDK для отслеживания</li>
+        <li>❌ Собираем идентификаторы устройств или личную информацию</li>
+        <li>❌ Отслеживаем ваши модели использования или поведение</li>
+        <li>❌ Передаём данные рекламодателям или брокерам данных</li>
+        <li>❌ Храним ваши данные на наших серверах</li>
+        <li>❌ Требуем регистрации или учётных записей</li>
+        <li>❌ Получаем доступ к вашим финансовым счетам или банковской информации</li>
+        <li>❌ Отправляем какие-либо данные через интернет</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">⚖️</span>
+        Ваши права и выбор
+      </h2>
+      
+      <p>Вы имеете полный контроль над своими данными в LiquidReceipt:</p>
+      
+      <ul>
+        <li><strong>Доступ:</strong> Вы имеете полный доступ ко всем данным чеков в приложении</li>
+        <li><strong>Экспорт:</strong> Вы можете экспортировать чеки в PDF или CSV в любое время</li>
+        <li><strong>Редактирование:</strong> Вы можете редактировать извлечённые данные (магазин, сумма, дата, валюта)</li>
+        <li><strong>Удаление:</strong> Вы можете удалять отдельные чеки, папки или использовать архив</li>
+        <li><strong>Контроль камеры:</strong> Вы можете включить или отключить доступ к камере в Настройках iOS</li>
+        <li><strong>Контроль микрофона:</strong> Вы можете включить или отключить доступ к микрофону в Настройках iOS</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">👶</span>
+        Конфиденциальность детей
+      </h2>
+      
+      <p>LiquidReceipt сознательно не собирает личную информацию детей младше 13 лет. Приложение разработано для безопасного использования пользователями любого возраста, при этом все данные хранятся локально на устройстве.</p>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">🔄</span>
+        Изменения в политике
+      </h2>
+      
+      <p>Мы можем обновлять эту политику конфиденциальности для отражения изменений в наших практиках или по юридическим причинам. При внесении изменений:</p>
+      
+      <ul>
+        <li>Мы обновим дату «Последнее обновление» в начале этой политики</li>
+        <li>Существенные изменения будут сообщаться через обновления приложения</li>
+        <li>Продолжение использования приложения означает принятие обновлённой политики</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span class="icon">📞</span>
+        Свяжитесь с нами
+      </h2>
+      
+      <p>Если у вас есть вопросы об этой политике конфиденциальности или о практиках LiquidReceipt в отношении конфиденциальности, свяжитесь с нами:</p>
+      
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:privacy@pavelgnatyuk.com">privacy@pavelgnatyuk.com</a></p>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Обычно мы отвечаем в течение 24-48 часов</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 LiquidReceipt by Pavel Gnatyuk • Создано с заботой о приватности
+  </div>
+</body>
+</html>
