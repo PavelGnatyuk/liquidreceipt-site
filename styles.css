@@ -204,6 +204,27 @@ html[data-theme="dark"] .blob {
   padding: 18px 0;
 }
 
+/* Document pages (Support / Privacy / Terms) should get to content faster */
+.doc .header {
+  padding: 10px 0;
+}
+
+.doc .section {
+  padding: 18px 0;
+}
+
+.doc .section.tight {
+  padding: 12px 0;
+}
+
+.doc .page-hero.card {
+  padding: 16px;
+}
+
+.doc .page-hero p {
+  margin-top: 6px;
+}
+
 /* Header */
 .header {
   position: sticky;
@@ -843,6 +864,30 @@ html[data-theme="dark"] .phone-shell {
   }
   .appstore-badge img {
     height: 42px;
+  }
+
+  /* On phones, doc pages should start with actual content (less chrome) */
+  .doc .section {
+    padding: 14px 0;
+  }
+  .doc .section.tight {
+    padding: 10px 0;
+  }
+  .doc .page-hero.card {
+    padding: 14px;
+  }
+  .doc .page-hero h1 {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+}
+
+/* iOS/WebView paint stability: avoid fixed backgrounds causing delayed paint */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+  .liquid-bg {
+    position: absolute;
   }
 }
 
