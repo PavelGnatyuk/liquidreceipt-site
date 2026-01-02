@@ -78,8 +78,10 @@ body {
     radial-gradient(900px 520px at 95% 15%, rgba(var(--accent-3) / 0.18), transparent 60%),
     radial-gradient(1000px 700px at 30% 95%, rgba(var(--accent-0) / 0.16), transparent 60%),
     linear-gradient(180deg, rgb(var(--bg)), rgb(var(--bg-2)));
-  background-attachment: fixed;
+  /* Safari can fail to paint long pages correctly with fixed background attachments */
+  background-attachment: scroll;
   overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -118,10 +120,13 @@ a:hover {
 /* Background liquid */
 .liquid-bg {
   pointer-events: none;
-  position: fixed;
+  /* Safari/WebKit paint stability: absolute background layer (no fixed compositing) */
+  position: absolute;
   inset: -100px;
   z-index: -1;
   filter: blur(0px) saturate(1.15);
+  contain: paint;
+  transform: translateZ(0);
 }
 
 .blob {
@@ -235,6 +240,7 @@ html[data-theme="dark"] .blob {
   border-bottom: 1px solid rgba(var(--border) / 0.18);
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
+  transform: translateZ(0);
 }
 
 .nav {
@@ -826,7 +832,9 @@ html[data-theme="dark"] .phone-shell {
 
 /* Reveal animation */
 .reveal {
-  opacity: 0;
+  /* Safari can delay IntersectionObserver callbacks until first scroll.
+     Never hide content by default; only animate position once revealed. */
+  opacity: 1;
   transform: translateY(10px);
   transition: opacity 520ms ease, transform 520ms ease;
 }
@@ -881,15 +889,7 @@ html[data-theme="dark"] .phone-shell {
   }
 }
 
-/* iOS/WebView paint stability: avoid fixed backgrounds causing delayed paint */
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
-  }
-  .liquid-bg {
-    position: absolute;
-  }
-}
+/* iOS/WebView paint stability handled above (keep this block reserved for future overrides) */
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
