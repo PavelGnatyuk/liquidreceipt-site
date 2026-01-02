@@ -2,347 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Support – Receipt</title>
+  <title>Support — Receipt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #8E9EAB 0%, #EEF2F3 100%);
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    
-    .hero {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 2rem 0;
-      text-align: center;
-      color: white;
-      margin-bottom: 2rem;
-    }
-    
-    .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 24px;
-      margin-bottom: 1rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-    
-    .hero h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .hero p {
-      font-size: 1.1rem;
-      margin: 1rem 0 0;
-      opacity: 0.9;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-    }
-    
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .card h2 {
-      font-size: 1.4rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .icon {
-      width: 24px;
-      height: 24px;
-      display: inline-block;
-    }
-    
-    a {
-      color: #667085;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-    
-    a:hover {
-      color: #D4A84B;
-      text-decoration: underline;
-    }
-    
-    .contact-info {
-      background: linear-gradient(135deg, #667085, #8E9EAB);
-      color: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1rem 0;
-    }
-    
-    .contact-info a {
-      color: white;
-      font-weight: 600;
-      text-decoration: underline;
-    }
-    
-    .faq-item {
-      background: #f8f9fa;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid #D4A84B;
-    }
-    
-    .faq-item strong {
-      color: #2c3e50;
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 1.05rem;
-    }
-    
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    
-    .feature-item {
-      background: #f8f9fa;
-      padding: 1rem;
-      border-radius: 8px;
-      border-left: 4px solid #D4A84B;
-      transition: background 0.2s ease;
-    }
-    
-    .feature-item:hover {
-      background: #e9ecef;
-    }
-    
-    .links-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    
-    .link-item {
-      background: linear-gradient(135deg, #667085, #8E9EAB);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .link-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(102, 112, 133, 0.3);
-      color: white;
-      text-decoration: none;
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.9rem;
-      backdrop-filter: blur(20px);
-      background: rgba(255, 255, 255, 0.1);
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      margin-top: 2rem;
-    }
-    
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .container {
-        padding: 0 1rem 2rem;
-      }
-      
-      .card {
-        padding: 1.5rem;
-      }
-      
-      .features-grid,
-      .links-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta name="description" content="Get help with Receipt. FAQs, contact info, and useful links.">
+
+  <link rel="icon" href="appicon.png">
+  <link rel="apple-touch-icon" href="appicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem("lr-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch {}
+    })();
+  </script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="hero">
-    <img src="appicon.png" alt="Receipt App Icon" class="app-icon">
-    <h1>Receipt Support</h1>
-    <p>Smart receipt scanner for business & travel</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="liquid-bg" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
   </div>
 
-  <div class="container">
-    <div class="card">
-      <h2>
-        <span class="icon">📧</span>
-        Contact Us
-      </h2>
-      <p>Need help, found a bug, or have feedback? We'd love to hear from you!</p>
-      <div class="contact-info">
-        <strong>Email:</strong> <a href="mailto:privacy@pavelgnatyuk.com">privacy@pavelgnatyuk.com</a>
-        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">We typically respond within 24-48 hours</p>
-      </div>
-    </div>
+  <div class="page">
+    <header class="header">
+      <div class="wrap">
+        <div class="nav">
+          <a class="brand" href="index.html" aria-label="Receipt Home">
+            <img src="appicon.png" alt="Receipt App Icon">
+            <div class="brand-title">
+              <strong>Receipt</strong>
+              <span>Support</span>
+            </div>
+          </a>
 
-    <div class="card">
-      <h2>
-        <span class="icon">❓</span>
-        Frequently Asked Questions
-      </h2>
-      
-      <div class="faq-item">
-        <strong>How do I scan a receipt?</strong>
-        Open the app, select or create a folder, then tap the scan button. Point your camera at the receipt – multi-page scanning is supported for long receipts.
-      </div>
-      
-      <div class="faq-item">
-        <strong>What data is extracted automatically?</strong>
-        Receipt uses Apple's Vision framework to automatically extract merchant name, transaction date, total amount, and individual line items from your receipts.
-      </div>
-      
-      <div class="faq-item">
-        <strong>Can I edit the extracted data?</strong>
-        Yes! You can manually edit the merchant name, total amount, currency, date, and exchange rate for any receipt. Edited fields are marked with a visual indicator.
-      </div>
-      
-      <div class="faq-item">
-        <strong>What currencies are supported?</strong>
-        Receipt supports 7 currencies: USD, EUR, GBP, RUB, ILS, GEL, and BYN. The app automatically detects currencies from receipt text, and you can add custom currencies with your own exchange rates.
-      </div>
-      
-      <div class="faq-item">
-        <strong>How do I export my receipts?</strong>
-        You can export as combined PDF (all receipts in one document) or CSV (spreadsheet with extracted data including merchant, date, total, currency, and comments). Perfect for expense reports!
-      </div>
-      
-      <div class="faq-item">
-        <strong>Can I share receipts from other apps?</strong>
-        Yes! Use the iOS Share Extension to send PDFs and images from Files, Mail, Safari, or Photos directly to Receipt.
-      </div>
-      
-      <div class="faq-item">
-        <strong>How does search work?</strong>
-        Search finds receipts by folder name, receipt name, comments, merchant name, or any text from the receipt (OCR). Case-insensitive and very fast.
-      </div>
-      
-      <div class="faq-item">
-        <strong>Does Receipt work offline?</strong>
-        Yes! Everything works completely offline. No internet connection is required to scan, organize, search, or export receipts.
-      </div>
-      
-      <div class="faq-item">
-        <strong>Where are my receipts stored?</strong>
-        All your receipts are stored locally on your device as PDFs. We never upload your data to any server or cloud service.
-      </div>
-      
-      <div class="faq-item">
-        <strong>Can I add notes to receipts?</strong>
-        Yes! Add comments by typing or using dictation. Great for adding context like "Client dinner" or "Hotel 3 nights".
-      </div>
-    </div>
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy_policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+          </nav>
 
-    <div class="card">
-      <h2>
-        <span class="icon">⭐</span>
-        Key Features
-      </h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <strong>🧠 Smart OCR</strong><br>
-          Auto-extract merchant, date, total & line items
-        </div>
-        <div class="feature-item">
-          <strong>📁 Folder Organization</strong><br>
-          Organize by trip, project, or category
-        </div>
-        <div class="feature-item">
-          <strong>💱 Multi-Currency</strong><br>
-          7 currencies with exchange rate tracking
-        </div>
-        <div class="feature-item">
-          <strong>📤 Export Reports</strong><br>
-          Combined PDF & CSV for expense reports
-        </div>
-        <div class="feature-item">
-          <strong>🔍 Powerful Search</strong><br>
-          Find by merchant, amount, or any text
-        </div>
-        <div class="feature-item">
-          <strong>🎤 Voice Comments</strong><br>
-          Add notes by typing or dictation
-        </div>
-        <div class="feature-item">
-          <strong>📲 Share Extension</strong><br>
-          Import from Files, Mail, Safari
-        </div>
-        <div class="feature-item">
-          <strong>🔒 100% Private</strong><br>
-          All data stays on your device
+          <div class="nav-cta">
+            <a class="btn primary" href="https://apps.apple.com/app/id6753892642">
+              <span class="shine" aria-hidden="true"></span>
+              Download
+            </a>
+            <button class="btn icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode" title="Toggle theme">
+              <span class="icon" data-theme-icon aria-hidden="true">☀︎</span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="card">
-      <h2>
-        <span class="icon">🔗</span>
-        Useful Links
-      </h2>
-      <div class="links-grid">
-        <a href="privacy_policy.html" class="link-item">
-          <strong>🔒 Privacy Policy</strong>
-          <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Learn how we protect your data</div>
-        </a>
-        <a href="https://apps.apple.com/app/id6753892642" class="link-item">
-          <strong>📱 App Store</strong>
-          <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.5rem;">Download or rate the app</div>
-        </a>
+    <main id="main">
+      <section class="section tight">
+        <div class="wrap">
+          <div class="glass card page-hero reveal">
+            <h1>Support</h1>
+            <p>Quick answers, real help, and a calm inbox.</p>
+            <div class="mt-12">
+              <span class="pill">Typically replies within 24–48 hours</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="glass card reveal">
+            <div class="headline">
+              <h2>Contact</h2>
+              <p>Bug reports, feature ideas, questions.</p>
+            </div>
+            <div class="callout">
+              <strong>Email:</strong> <a href="mailto:privacy@pavelgnatyuk.com">privacy@pavelgnatyuk.com</a><br>
+              <span class="muted">Include screenshots if you can — it helps a lot.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="glass card reveal">
+            <div class="headline">
+              <h2>FAQ</h2>
+              <p>Tap to expand.</p>
+            </div>
+            <div class="faq-list">
+              <details>
+                <summary>How do I scan a receipt? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Open the app, select or create a folder, then tap scan. Point your camera at the receipt — multi‑page scanning is supported for long receipts.</div>
+              </details>
+              <details>
+                <summary>What data is extracted automatically? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Receipt uses Apple’s Vision framework to extract merchant name, date, total amount, and line items (depending on receipt quality).</div>
+              </details>
+              <details>
+                <summary>Can I edit the extracted data? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Yes. You can edit merchant, total, currency, date, and exchange rate. Edited fields are visually marked.</div>
+              </details>
+              <details>
+                <summary>What currencies are supported? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Receipt supports 7 currencies: USD, EUR, GBP, RUB, ILS, GEL, and BYN. Currency can be detected from text; you can also add custom currencies with your own exchange rates.</div>
+              </details>
+              <details>
+                <summary>How do I export my receipts? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Export a combined PDF (all receipts together) and/or a CSV with extracted fields (merchant, date, total, currency, comments) — great for expense reports.</div>
+              </details>
+              <details>
+                <summary>Can I share receipts from other apps? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Yes. Use the iOS Share Extension to send PDFs and images from Files, Mail, Safari, or Photos directly to Receipt.</div>
+              </details>
+              <details>
+                <summary>Does Receipt work offline? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Yes. Scanning, organizing, searching, and exporting all work offline. No servers, no accounts.</div>
+              </details>
+              <details>
+                <summary>Where are my receipts stored? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Locally on your device as PDFs. We never upload your receipts to any server or cloud service.</div>
+              </details>
+              <details>
+                <summary>Can I add notes to receipts? <span class="chev" aria-hidden="true">›</span></summary>
+                <div class="answer">Yes. Add comments by typing or dictation — perfect for context like “Client dinner” or “Hotel • 3 nights”.</div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="glass card reveal">
+            <div class="headline">
+              <h2>Useful links</h2>
+              <p>Everything in one place.</p>
+            </div>
+            <div class="grid-3">
+              <a class="feature" href="privacy_policy.html">
+                <div class="feat-icon" aria-hidden="true">🛡️</div>
+                <h3>Privacy Policy</h3>
+                <p>Learn how your data stays yours.</p>
+              </a>
+              <a class="feature" href="terms.html">
+                <div class="feat-icon" aria-hidden="true">📄</div>
+                <h3>Terms</h3>
+                <p>Simple terms, no surprises.</p>
+              </a>
+              <a class="feature" href="https://apps.apple.com/app/id6753892642">
+                <div class="feat-icon" aria-hidden="true"></div>
+                <h3>App Store</h3>
+                <p>Download, rate, or share.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <small>© 2025 Receipt by <a href="mailto:privacy@pavelgnatyuk.com">Pavel Gnatyuk</a> • Built with privacy in mind</small>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="privacy_policy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="mailto:privacy@pavelgnatyuk.com">Contact</a>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    &copy; 2025 Receipt by Pavel Gnatyuk • Made for organized travelers
+    </footer>
   </div>
 </body>
 </html>
